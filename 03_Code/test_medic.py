@@ -1,7 +1,7 @@
-import unittest
+import pytest
 from medic import Medic, Player
 
-class TestMedic(unittest.TestCase):
+class TestMedic(pytest.TestCase):
     def test_add_healing_record(self):
         medic = Medic()
         player = Player()
@@ -16,4 +16,4 @@ class TestMedic(unittest.TestCase):
         self.assertEqual(player.energy[0], initial_energy + 1)
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()

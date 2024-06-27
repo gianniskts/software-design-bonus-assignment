@@ -1,7 +1,7 @@
-import unittest
+import pytest
 from collector import Collector, Resource
 
-class TestCollector(unittest.TestCase):
+class TestCollector(pytest.TestCase):
     def test_track_resource_collection(self):
         collector = Collector()
         resource = Resource("Plant_test", 5)
@@ -20,4 +20,4 @@ class TestCollector(unittest.TestCase):
         self.assertEqual(stats.resource_breakdown["test2"], 3)
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()
